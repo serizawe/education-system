@@ -1,0 +1,14 @@
+#root {
+  max-width: 1900px;
+  max-height: 1080px;
+  text-align: center;
+}
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
