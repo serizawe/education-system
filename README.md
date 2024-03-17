@@ -1,1 +1,1 @@
-I completed this project during my internship, aiming to create a simple educational system similar to Udemy or EBA. This is only the front-end part. I used TypeScript-React and Tailwind CSS.
+I completed this project during my internship, aiming to create a simple educational system similar to Udemy or EBA. This is only the front-end part. I used TypeScript-React and Tailwind CSS.![image](https://github.com/serizawe/education-system/assets/87567732/2bdd14b7-b71c-4310-a336-ec893ce2fa1f)
