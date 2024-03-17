@@ -31,8 +31,6 @@ const InstructorCoursesList: React.FC = () => {
                 console.error(error);
             }
         };
-
-        // Call the function to fetch instructor courses
         getInstructorCourses();
     }, [instructorId]);
 

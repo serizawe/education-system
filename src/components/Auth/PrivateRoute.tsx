@@ -5,7 +5,7 @@ import { useAppSelector } from '../../redux/store';
 
 interface PrivateRouteProps {
     children: ReactNode;
-    allowedUserTypes: string[]; // Assuming allowedUserTypes is an array of string user types
+    allowedUserTypes: string[]; 
 }
 
 const PrivateRoute: React.FC<PrivateRouteProps> = ({ children, allowedUserTypes }) => {

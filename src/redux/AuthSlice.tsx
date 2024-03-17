@@ -35,7 +35,7 @@ export const login = createAsyncThunk(
             return { token, role, userId };
         } catch (error) {
             dispatch(loginFailure({ error: (error as Error).message }));
-            throw error; // Re-throw the error for further handling if needed
+            throw error; 
         }
     }
 );

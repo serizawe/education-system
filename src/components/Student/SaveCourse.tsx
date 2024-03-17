@@ -21,7 +21,7 @@ const StudentCourseDetailsWithSave: React.FC = () => {
         courseMaterials: CourseMaterial[];
     } | null>(null);
     const [isLoading, setIsLoading] = useState<boolean>(true);
-    const [isCourseSaved, setIsCourseSaved] = useState<boolean | null>(null); // Change the type to boolean | null
+    const [isCourseSaved, setIsCourseSaved] = useState<boolean | null>(null);
     const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
@@ -68,9 +68,9 @@ const StudentCourseDetailsWithSave: React.FC = () => {
 
                 if (response.status === 201) {
                     setIsCourseSaved(true);
-                    console.log(response.data); // Log the success message
+                    console.log(response.data);
                 } else {
-                    console.error('Enrollment failed:', response.data); // Log the error message
+                    console.error('Enrollment failed:', response.data);
                 }
             }
         } catch (error) {

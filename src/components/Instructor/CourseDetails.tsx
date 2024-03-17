@@ -62,10 +62,7 @@ const CourseDetails: React.FC = () => {
         if (courseDetails && deleteConfirmation.courseMaterialId) {
             console.log(deleteConfirmation.courseMaterialId);
             try {
-                // Make a delete request to the backend with the specific material id
                 await axios.delete(`https://localhost:7250/api/courses/material/${deleteConfirmation.courseMaterialId}`);
-
-                // Update the local state to reflect the deletion
                 const updatedcourseMaterials = courseDetails.courseMaterials.filter(
                     (courseMaterial) => courseMaterial.id !== deleteConfirmation.courseMaterialId
                 );

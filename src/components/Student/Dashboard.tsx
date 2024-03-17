@@ -19,8 +19,7 @@ const Dashboard: React.FC = () => {
     const [searchQuery, setSearchQuery] = useState<string>('');
 
     useEffect(() => {
-        // Fetch courses from the backend when the component mounts
-        axios.get('https://localhost:7250/api/courses') // Replace with your actual backend URL
+        axios.get('https://localhost:7250/api/courses') 
             .then((response) => {
                 console.log(response.data);
                 setAllCourses(response.data);

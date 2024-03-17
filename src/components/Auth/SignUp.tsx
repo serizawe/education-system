@@ -12,7 +12,7 @@ const SignUp: React.FC = () => {
     const [emailError, setEmailError] = useState<string>("");
     const [passwordError, setPasswordError] = useState<string>("");
     const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/; // At least 8 characters, one letter, and one number
+    const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/; 
     const [role, setRole] = useState<string>('student');
     const [isLoading, setIsLoading] = useState<boolean>(false);
     const [signUpError, setSignUpError] = useState<string | null>(null);
@@ -29,7 +29,6 @@ const SignUp: React.FC = () => {
                 password,
                 role
             });
-            // Handle the response here, if needed
         } catch (error: any) {
             setSignUpError(error.response?.data?.message || "An error occurred");
         } finally {
@@ -104,22 +103,22 @@ const SignUp: React.FC = () => {
                         </button>
                     </div>
                     <div className="flex flex-col">
-                        <label className="text-gray-600 text-lg font-medium">Ad</label>
+                        <label className="text-gray-600 text-lg font-medium">İsim</label>
                         <input
                             type="text"
                             className="w-full border-2 border-gray-100 rounded-xl p-4 mt-1"
-                            placeholder="Adınız"
+                            placeholder="İsminiz"
                             value={name}
                             onChange={handleNameChange}
                         />
                         {nameError && <p className="text-red-500">{nameError}</p>}
                     </div>
                     <div className="flex flex-col">
-                        <label className="text-gray-600 text-lg font-medium">Soyad</label>
+                        <label className="text-gray-600 text-lg font-medium">Soy İsim</label>
                         <input
                             type="text"
                             className="w-full border-2 border-gray-100 rounded-xl p-4 mt-1"
-                            placeholder="Soy adınız"
+                            placeholder="Soy isminiz"
                             value={surname}
                             onChange={handleSurnameChange}
                         />
